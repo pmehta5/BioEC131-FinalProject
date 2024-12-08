@@ -17,3 +17,19 @@ For macOS, use Homebrew:
 ```
 brew install perl wget
 ```
+
+Install EDirect Tools
+```
+cd ~
+wget https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/edirect.tar.gz
+tar -xzf edirect.tar.gz
+rm edirect.tar.gz
+export PATH=$PATH:$HOME/edirect
+```
+
+Access your shell configuration file ```nano ~/.zshrc``` for Zsh or ```nano ~/.bashrc``` for Bash
+and add the following line to the file, save, and exit
+```
+export PATH=$PATH:$HOME/edirect
+```
+
