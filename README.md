@@ -38,15 +38,15 @@ Then, enter ```source ~/.zshrc``` or ```source ~/.bashrc``` to reload your shell
 Now, you can use the following commands to fetch the 5 FASTA files and 5 GFF3 files for the COVID Variants. Ensure that you are in the correct directory/workspace for your project, so that the files download in the correct location. You can use ```cd ~/yourpath``` and enter in the appriopriate path to your project folder prior to running this code.
 ```
 efetch -db nucleotide -format fasta -id OQ204161 > Alpha.fasta
-efetch -db nucleotide -format gff -id OQ204161 > Alpha.gff
+efetch -db nuccore -format gff3 -id OQ204161 > Alpha.gff3
 efetch -db nucleotide -format fasta -id OL678795 > Beta.fasta
-efetch -db nucleotide -format gff -id OL678795 > Beta.gff
+efetch -db nuccore -format gff3 -id OL678795 > Beta.gff3
 efetch -db nucleotide -format fasta -id OL852672 > Gamma.fasta
-efetch -db nucleotide -format gff -id OL852672 > Gamma.gff
+efetch -db nuccore -format gff3 -id OL852672 > Gamma.gff3
 efetch -db nucleotide -format fasta -id OL873994 > Delta.fasta
-efetch -db nucleotide -format gff -id OL873994 > Delta.gff
+efetch -db nuccore -format gff3 -id OL873994 > Delta.gff3
 efetch -db nucleotide -format fasta -id OL845686 > Omicron.fasta
-efetch -db nucleotide -format gff -id OL845686 > Omicron.gff
+efetch -db nuccore -format gff3 -id OL845686 > Omicron.gff3
 ```
 
 ## 3. Process and load the data into jBrowse
