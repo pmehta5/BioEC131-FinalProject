@@ -69,3 +69,4 @@ Finally, in order to allow the user to search for the genes we need to run the t
 ```
 jbrowse text-index --out $APACHE_ROOT/jbrowse2
 ```
+Now all your data should be loaded into your jbrowse! You can look at genome annotations for each variants and analyze the sequence of each variant.
