@@ -32,4 +32,14 @@ and add the following line to the file, save, and exit
 ```
 export PATH=$PATH:$HOME/edirect
 ```
+Then, enter ```source ~/.zshrc``` or ```source ~/.bashrc``` to reload your shell config file.
 
+
+Now, you can use the following commands to fetch the 5 FASTA files and 5 GFF3 files for the COVID Variants. 
+```
+efetch -db nucleotide -format fasta -id OQ204161 > Alpha.fasta
+efetch -db nucleotide -format fasta -id OL678795 > Beta.fasta
+efetch -db nucleotide -format fasta -id OL852672 > Gamma.fasta
+efetch -db nucleotide -format fasta -id OL873994 > Delta.fasta
+efetch -db nucleotide -format fasta -id OL845686 > Omicron.fasta
+```
