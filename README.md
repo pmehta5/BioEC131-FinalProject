@@ -7,7 +7,7 @@ Follow the instructions on https://currentprotocols.onlinelibrary.wiley.com/doi/
 ## 2. Download the necessary COVID Variant files for analysis
 In order to download the FASTA and GFF3 files, we will be fetching the NCBI data using their EDirect tools. Depending on your system, follow the instructions below to install Entrez Direct Tools:
 
-For Linux/Unix/macOS:
+For Linux/Unix:
 ```
 sudo apt update
 sudo apt install -y perl wget
