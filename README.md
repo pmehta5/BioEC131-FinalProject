@@ -70,3 +70,15 @@ Finally, in order to allow the user to search for the genes we need to run the t
 jbrowse text-index --out /YOUR-PATH/jbrowse2
 ```
 Now all your data should be loaded into your jbrowse! You can look at genome annotations for each variants and analyze the sequence of each variant.
+
+## 4. Download synteny analysis data and visualize in jBrowse
+Download the Synteny folder from this repository and place it in your appropriate directory/workspace. This folder should contain 10 .paf files, which contain synteny analysis of the 5 different variants and were generated through minimap2. Similar to how the GFF3 files were loaded into jBrowse, we will load in these files as synteny tracks. Be sure to replace with your path to jbrowse folder, and repeat for each file.
+```
+jbrowse add-track "Beta_Alpha.paf" --name "Beta-Alpha Synteny" --assemblyNames "Alpha,Beta" --out "/YOUR-PATH/jbrowse2" --load copy 
+```
+Now you should be able to utilize the linear synteny view tool in jBrowse to analyze the synteny of the different variants.
+
+## 5. Download MSA and phylogenetic tree data and visualize in jBrowse
+Download the MSA_tree folder from this repository and place it in your appropriate directory/workspace. This folder should contain 2 files, a fasta file and a treefile. Next, add the MSA View Plugin from the jBrowse plugin store in the Tools section of jBrowse, and then upload these two files into the plugin directly to visualize a phylogenetic tree and multiple sequence alignment data of the 5 variants.
+
+## 6. Download PDB data and visualize 3D protein structures in jBrowse
