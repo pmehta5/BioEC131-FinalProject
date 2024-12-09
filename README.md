@@ -67,6 +67,6 @@ jbrowse add-track sortedAlpha.gff.gz --assemblyNames "Alpha" --out /YOUR-PATH/jb
 
 Finally, in order to allow the user to search for the genes we need to run the text-index command.
 ```
-jbrowse text-index --out $APACHE_ROOT/jbrowse2
+jbrowse text-index --out /YOUR-PATH/jbrowse2
 ```
 Now all your data should be loaded into your jbrowse! You can look at genome annotations for each variants and analyze the sequence of each variant.
