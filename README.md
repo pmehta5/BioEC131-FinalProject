@@ -35,7 +35,7 @@ export PATH=$PATH:$HOME/edirect
 Then, enter ```source ~/.zshrc``` or ```source ~/.bashrc``` to reload your shell config file.
 
 
-Now, you can use the following commands to fetch the 5 FASTA files and 5 GFF3 files for the COVID Variants. 
+Now, you can use the following commands to fetch the 5 FASTA files and 5 GFF3 files for the COVID Variants. Ensure that you are in the correct directory/workspace for your project, so that the files download in the correct location. You can use ```cd ~/yourpath``` and enter in the appriopriate path to your project folder prior to running this code.
 ```
 efetch -db nucleotide -format fasta -id OQ204161 > Alpha.fasta
 efetch -db nucleotide -format gff -id OQ204161 > Alpha.gff
