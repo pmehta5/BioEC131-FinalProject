@@ -50,14 +50,19 @@ efetch -db nuccore -format gff3 -id OL845686 > Omicron.gff3
 ```
 
 ## 3. Process and load the data into jBrowse
-For the fasta files, we will need to index them via the commands below and then load them as an assembly into jBrowse. Be sure to replace with the correct path to where your jbrowse folder is. It is typically located in a 'www' folder. Repeat for each of the 5 FASTA files (Alpha, Beta, Gamma, Delta, Omicron)
+For the fasta files, we will need to index them via the commands below and then load them as an assembly into jBrowse. Be sure to replace with the correct path to where your jbrowse folder is. It is typically located in a 'www' folder. Repeat for each of the 5 FASTA files (Alpha, Beta, Gamma, Delta, Omicron).
 ```
 samtools faidx Alpha.fasta
-jbrowse add-assembly Alpha.fasta --out YOUR-PATH/jbrowse2 --load copy
+jbrowse add-assembly Alpha.fasta --out /YOUR-PATH/jbrowse2 --load copy
 ```
 
-For the GFF3 files, we want to sort the annotations, compress the GFF3 file, and then index with tabix. Once those are done, we can load the annotation track.
+For the GFF3 files, we want to sort the annotations, compress the GFF3 file, and then index with tabix. Once those are done, we can load the annotation track. Be sure to replace with your path to jbrowse folder, and repeat for each of the 5 FASTA files (Alpha, Beta, Gamma, Delta, Omicron).
 ```
+jbrowse sort-gff Alpha.gff3 > sortedAlpha.gff
+bgzip sortedAlpha.gff
+tabix sortedAlpha.gff.gz
+
+jbrowse add-track sortedAlpha.gff.gz --assemblyNames "Alpha" --out /YOUR-PATH/jbrowse2 --load copy
 ```
 
 Finally, in order to allow the user to search for the genes we need to run the text-index command.
