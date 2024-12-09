@@ -48,3 +48,17 @@ efetch -db nucleotide -format gff -id OL873994 > Delta.gff
 efetch -db nucleotide -format fasta -id OL845686 > Omicron.fasta
 efetch -db nucleotide -format gff -id OL845686 > Omicron.gff
 ```
+
+## 3. Process and load the data into jBrowse
+For the fasta files, we will need to index them via the commands below and then load them as an assembly into jBrowse.
+```
+```
+
+For the GFF3 files, we want to sort the annotations, compress the GFF3 file, and then index with tabix. Once those are done, we can load the annotation track.
+```
+```
+
+Finally, in order to allow the user to search for the genes we need to run the text-index command.
+```
+jbrowse text-index --out $APACHE_ROOT/jbrowse2
+```
